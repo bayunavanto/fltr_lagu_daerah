@@ -34,42 +34,51 @@ class _DetailPageState extends State<DetailPage> {
           ),
         ),
       ),
-      body: ListView(
-        padding: const EdgeInsets.all(16),
-        children: [
-          Text(
-            widget.province.laguDaerah,
-            style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-            textAlign: TextAlign.center,
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: NetworkImage(
+                'https://img.freepik.com/free-vector/vintage-ornamental-flowers-background_52683-28040.jpg?t=st=1723604186~exp=1723607786~hmac=9e8c27676fcdf57259e12c7831eb163f4a5b2b98d36a6a30dce533e501ef2cd3&w=740'), // Ganti dengan URL gambar yang diinginkan
+            fit: BoxFit.cover,
           ),
-          const SizedBox(
-            height: 4,
-          ),
-          Text(
-            '${widget.province.nama} - ${widget.province.ibuKota}',
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(
-            height: 12,
-          ),
-          Image.network(
-            widget.province.photo,
-            height: 300,
-          ),
-          const SizedBox(
-            height: 12,
-          ),
-          Container(
-            decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 240, 230, 230),
-                borderRadius: BorderRadius.all(Radius.circular(20))),
-            child: Text(
-              widget.province.lirikLaguDaerah,
+        ),
+        child: ListView(
+          padding: const EdgeInsets.all(16),
+          children: [
+            Text(
+              widget.province.laguDaerah,
+              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 14),
             ),
-          )
-        ],
+            const SizedBox(
+              height: 4,
+            ),
+            Text(
+              '${widget.province.nama} - ${widget.province.ibuKota}',
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+            Image.network(
+              widget.province.photo,
+              height: 300,
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 240, 230, 230),
+                  borderRadius: BorderRadius.all(Radius.circular(20))),
+              child: Text(
+                widget.province.lirikLaguDaerah,
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontSize: 14),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
