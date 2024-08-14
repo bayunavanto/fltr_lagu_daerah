@@ -1,4 +1,4 @@
-package com.example.flutter_lagu_daerah_app
+package com.navanto.lagudaerah
 
 import io.flutter.embedding.android.FlutterActivity
 
